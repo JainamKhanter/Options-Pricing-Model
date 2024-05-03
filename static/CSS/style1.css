@@ -1,0 +1,118 @@
+
+
+
+
+.heading{
+    
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 50px;
+    text-align: center;
+    font: dm-Sans;
+    
+
+}
+
+.subheading{
+    color: rgb(98, 97, 97);
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 30px;
+    font: dm-Sans;
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+}
+
+.nav-img{
+    margin-left: 20px;
+    width: 100px;
+    height: 50px;
+}
+
+.nav-form{
+    margin-left: 0px;
+}
+
+.nav-btn{
+    /* padding-left: 30px; */
+    /* padding-right: 100px; */
+    display: block;
+    background: linear-gradient(90deg,#3d0000, #950101, #b23c3c);
+    margin-right: 10px;
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-radius: 20px;
+    color: black;
+    /* width: 150px; */
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+.nav-btn:hover{
+    box-shadow: 0 0px 2px 2px white;
+}
+
+.card-btn{
+    background: linear-gradient(90deg,#3d0000, #950101, #b23c3c);
+    /* margin-right: 10px; */
+    /* background-color: white; */
+    border: solid 2px;
+    border-color: black;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    /* height: 10px; */
+    align-self:center ;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.card-btn:hover{
+    background: linear-gradient(90deg,#3d0000, #7a0000, #950101);  
+
+}
+
+.box{
+    display: inline-block;
+    padding-top: 50px;
+    /* padding-left: 100px;    */
+    margin-left: 80px;
+}
+
+/* .box:hover{
+   border-color: white;
+   border-width: 2px; 
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}  */
+
+.card{
+    color: aquamarine;
+   border-radius: 10px;
+   border: 2px solid #333;
+   
+}
+
+
+.card:hover{
+    /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);  */
+    
+    box-shadow: 0 0px 2px 2px white;
+    /* border-width: 10px;  */
+}
+
+.container{
+    align-self: center;
+    margin-left: 20px;
+}
+

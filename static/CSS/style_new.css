@@ -1,0 +1,280 @@
+
+
+
+
+/* h1{
+    margin-left: 60px;
+    padding: 40px;
+   
+    
+}
+h2{
+    margin-left: 60px;
+    padding: 40px;
+    
+} */
+
+
+
+
+body{
+    /* left: 0; */
+    padding: 40px;
+    color: black; 
+    background-color: rgb(222, 222, 231); 
+  /* background-image: url("5153829.jpg") ; */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+.taskbar{
+    margin-right: 100px;
+    background-color: rgb(3, 6, 67);
+    /* color: blue; */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* text-align: center; */
+    font-size: 20px ;
+    
+}
+
+.task{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.task:hover{
+    color: yellow;
+
+}
+.taskbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.taskbar ul li {
+    margin-right: 20px; /* Adjust spacing between tasks */
+}
+.taskbar a:hover, .dropdown:hover{
+    /* background-color: red; */
+  }
+  
+
+
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 2000px;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0,2); */
+    z-index : 1;
+        padding-top: 10px; /* Space for the taskbar */
+        border: 1px solid white; /* Add a border */
+        border-radius: 4px; /* Add border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+        font-size: 14px; /* Increase font size */
+        background-color:  rgb(3, 6, 67);
+        transition: opacity 1s ease-in-out;
+}
+/* .dropdown-content.show {
+    display: block;
+} */
+.dropdown-content a {
+    display: flex;
+    background-color:  rgb(3, 6, 67);
+   
+    padding: 10px;
+    text-decoration: none;
+    color: white; /* Set text color */
+
+}
+
+.dropdown-content a:hover {
+    background-color:  rgb(3, 6, 67); 
+    /* Change background color on hover */
+    color:yellow
+}
+/* .dropdown-content {
+    display: none;
+    opacity: 0;
+   
+} */
+
+/* .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+    opacity: 1;
+} */
+
+
+
+
+
+
+
+
+.taskbar-photo{
+    display: inline-block;
+    margin-right: 300px;
+    height: 30px;
+}
+
+label{
+    width: 300px;
+    display: inline-block;
+    /* margin-left:50px; */
+    margin-top: 10px;
+    text-align: left;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* margin-right: 10px; */
+}
+
+input{
+    margin-left: 30px;
+    border-radius: 15px;
+    height: 30px;
+    width: 200px;
+    border: 2px solid black;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    text-align: right;
+    font-size: 25px;
+    /* flex: 1; */
+}
+
+.search{
+    margin-left: 80px;
+    margin-right: 100px;
+    border-radius: 8px;
+    height: 30px;
+    width: 300px;
+    border: 2px solid black;
+    vertical-align: top;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 50px;
+}
+/* .container_label{
+    margin-top: 60px;
+    margin-left: 200px;
+} */
+.container {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+.container_label {
+    /* flex: 1; Take up remaining space */
+    padding: 20px;
+    border-right: 1px solid #ddd;
+     /* Add border to the left */
+}
+
+.sidebar {
+    display: grid;
+    margin-top: 155px;
+    width: 400px; /* Fixed width for the sidebar */
+    height: 400px;
+    padding: 20px;
+    background-color:rgb(3, 6, 67);
+    border-left: 1px solid #ddd; /* Add border to the left */
+    border-radius: 10px;
+    color: white;
+
+}
+.large-text {
+    font-size: 24px; /* Set the font size to 24 pixels */
+}
+.side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.side-by-side div {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-by-side p {
+    margin: 0;
+}
+
+.label-inp{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* .adjuster{
+    margin-top: 20px;
+    margin-left: 75px;
+    width: 450px;
+    height: 10px;
+    -moz-appearance: none;
+    background-color: rgb(166, 225, 233);
+     border: none; 
+} */
+
+
+.image-cont{
+    /* float: right; */
+    /* display: inline-block; */
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+    margin-top: 100px ;
+    
+    /* height: 60px; */
+    /* width: 100px; */
+}
+
+.image-cont img{
+    width: 500px;
+    height: auto;
+}
+
+.res_button{
+    margin-left: 310px;
+}
+
+.result{
+    height: 35px;
+    width: 200px;
+    border: 2px black solid;
+    background-color: rgb(3, 6, 67);
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s;
+    
+}
+
+.result:hover{
+    background-color: rgb(48, 26, 119);
+}
+

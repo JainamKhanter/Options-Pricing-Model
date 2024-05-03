@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+<title >Options pricing model</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_new.css') }}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="static/script2.js"></script>
+<script src="static/drop.js"></script>
+<script src="static/login_trigger.js"></script>
+</head>
+<body >
+    <!-- <div class="image-cont">
+        <img src="option photo.jpg" alt="Image Descp">
+    </div> -->
+    <div class = "taskbar">
+
+        <ul>
+            <li class="dropdown" >
+                <a href="#" class="task">Option Price Calculator</button>
+                <!-- <button class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button> -->
+                <div class="dropdown-content" id="dropdown-content-1">
+                    <a href="#">Subtask 1</a>
+                    <a href="#">Subtask 2</a>
+                    <a href="#">Subtask 3</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="task" onclick="toggleDropdownContent('dropdown-content-2')">Monte Carlo</button>
+                <div class="dropdown-content" id="dropdown-content-2">
+                    <a href="#">Subtask 1</a>
+                    <a href="#">Subtask 2</a>
+                    <a href="#">Subtask 3</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="task" onclick="toggleDropdownContent('dropdown-content')" >Your Options</button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">Subtask 1</a>
+                    <a href="#">Subtask 2</a>
+                    <a href="#">Subtask 3</a>
+                </div>
+            </li>
+        
+        <input type="text" id="search_input" value="search option" class="search" placeholder="search for options">
+        <a href="/login" class="task" id="login-btn">Login</a>
+        <a href="#" class="task">About Us</a>
+    </ul>
+    </div>
+    
+
+    </div>
+    
+    <!-- <h6>-By Daksh Jain, Bhaskar Kapase and Jainam Khanter</h6> -->
+    <!-- <h4> Last heading</h4> -->
+    <div class="container">
+    <div class ="container_label">
+    <h1 >Options Price Calculator</h1>
+    <!-- <h2>Calculate your options value</h2> -->
+    <div class = "label-inp">
+    <label for="option price"><b>Underlying price</b></label>
+    <input type="number" id ="option price" name="option price" placeholder="Underlying Price">
+    <br>
+    
+    </div>
+    <div class = "label-inp">
+    <label for="strike price"><b>Strike price</b></label>
+    <input type="number" id ="strike price" name="strike price" placeholder="Strike Price">
+    <br>
+    
+</div>
+    <div class = "label-inp">
+    <label for="rate"><b> Interest Rate</b></label>
+    <input type="number" id ="rate" name="rate" placeholder="In percent">
+    <br>
+    
+</div>
+<div class = "label-inp">
+    <label for="duration"><b> Days Until Expiration</b></label>
+    <input type="number" id ="duration" name="duration">
+    <br>
+    
+</div>
+<div class = "label-inp">
+    <label for="yield"><b> Dividend Yield</b></label>
+    <input type="number" id ="yield" name="yield" placeholder="In percent">
+    <br>
+    
+</div>
+<div class = "label-inp">
+    <label for="volatality"><b>Volatality</b></label>
+    <input type="number" id ="volatality" name="volatality" placeholder="In percent">
+    <br>
+   
+</div>
+
+<!-- <div class = "lab-inp">
+    <label for="volatality"></label><b>Volatality:</b></label>
+    <input type="number" id ="volatality" name="volatality" placeholder="In percent">
+</div> -->
+    <div class = "res_button">
+    <input type="button" id="calculate-btn" value="calculate" class="result">
+    </div>
+
+</div>
+        
+        <div class="sidebar">
+            <!-- Box content for the sidebar -->
+            <!-- <h2>Sidebar Box</h2> -->
+            <div class="side-by-side">
+                <div>
+                    <p class="large-text">Call Price</p>
+                    <span class="large-text" id="call-price">0.0000</span>
+                </div>
+                <div>
+                    <p class="large-text">Put Price</p>
+                    <span class="large-text" id="put-price">0.0000</span>
+                </div>
+            </div>
+            <div class="side-by-side">
+                
+                <div>
+                    <p>Call Delta</p>
+                    <span id="call-delta">0.0000</span>
+                </div>
+            
+            
+                <div>
+                    <p>Put Delta</p>
+                    <span id="put-delta">0.0000</span>
+                </div>
+            
+            </div>
+            
+                <div class="side-by-side">
+                <div>
+                    <p>Call Theta</p>
+                    <span id="call-theta">0.0000</span>
+                </div>
+                <div>
+                    <p>Put Theta</p>
+                    <span id="put-theta">2.3363</span>
+                </div>
+            </div>
+            
+            <div class="side-by-side">
+                
+                <div>
+                    <p>Call Rho</p>
+                    <span id="call-rho">0.0000</span>
+                </div>
+                <div>
+                    <p>Put Rho</p>
+                    <span id="put-rho">0.0000</span>
+                </div>
+            </div>
+            <div class="side-by-side">
+                <div>
+                    <p>Gamma</p>
+                    <span id="gamma">0.0000</span>
+                </div>
+                <div>
+                    <p>Vega</p>
+                    <span id="vega">-2.3363</span>
+                </div>
+            </div>
+            
+                
+            </div>
+        </div>
+        </div>
+    </div>
+
+   
+
+    
+    <!-- <script>
+        const adjuster = document.getElementById('adjuster');
+        const adjusterValue = document.getElementById('adjusterValue');
+        adjuster.addEventListener('input',
+        function(){
+            adjusterValue.textContent = adjuster.value;
+        });
+    </script> -->
+   <!-- <p></p> -->
+   
+  
+   <!-- <p></p>
+   <input type="color" name="red" id="r" style="color:blueviolet;">
+   <input type="datetime" name="curr" id="cT">
+   <input type="email" name="" id=""> -->
+
+</body>
+</html>     
