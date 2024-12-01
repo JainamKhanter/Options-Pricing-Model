@@ -56,11 +56,11 @@ def info123():
 
 @app.route("/monte_carlo", methods=['POST'])
 def plot_monte_graph():
-    global num
+    
     data = request.get_json()
-    status = plot_graph(data,num)
-    plot_filename = f"/static/plot_{num}.png"
-    num+=1
+    status = plot_graph(data)
+    plot_filename = f"/static/plot_0.png"
+    
     return jsonify({"status":status, "plot_filename":plot_filename})
 
 
@@ -135,7 +135,7 @@ def calculate_option_price():
         # company_name = 'AARTIIND'
         # print(c)
        
-        url1 = f'https://api.upstox.com/v2/historical-candle/{company_index[company_name]}/day/2024-04-26/2024-02-19'
+        url1 = f'https://api.upstox.com/v2/historical-candle/{company_index[company_name]}/day/2024-11-17/2024-02-19'
         # url1 = f'https://api.upstox.com/v2/historical-candle/NSE_EQ%7CINE848E01016/day/2024-04-26/2024-02-19'
         headers = {
             'Accept': 'application/json'
@@ -164,21 +164,6 @@ def calculate_option_price():
         
         sigma = 100*np.std(log_returns)
         print(sigma)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
 
         d1 = (np.log(S / K) + (r - q + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
@@ -219,7 +204,6 @@ def calculate_option_price1():
         r = float(data['interestRate']) / 100.0
         q = float(data['dividendYield']) / 100.0 
         sigma = float(data['volatility']) / 100.0
-        print("hi")
         d1 = (np.log(S / K) + (r - q + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
         d2 = d1 - sigma * np.sqrt(T)
 

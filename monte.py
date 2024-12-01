@@ -4,8 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import requests
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
 
-num = 0
 
 def monte_carlo_simulation(start_price, n, mean_return, volatility):
     daily_returns = np.random.normal(mean_return / n, abs(volatility) / np.sqrt(n), n) + 1
@@ -17,7 +18,7 @@ def monte_carlo_simulation(start_price, n, mean_return, volatility):
 df = pd.read_csv("BSE.csv")
 company_index = dict(zip(df.iloc[:,2], df.iloc[:,0]))
 
-def plot_graph(data,num):
+def plot_graph(data):
     global company_index
     company_name = data['company']
     company_code = company_index.get(company_name)  # Get the company code from the CSV
@@ -25,7 +26,7 @@ def plot_graph(data,num):
         print("Company code not found for", company_name)
         return False
 
-    url = f'https://api.upstox.com/v2/historical-candle/{company_code}/day/2024-04-30/2024-04-20'
+    url = f'https://api.upstox.com/v2/historical-candle/{company_code}/day/2024-11-17/2024-04-20'
     response = requests.get(url)
     if response.status_code == 200:
         print("Data received successfully")
@@ -54,7 +55,7 @@ def plot_graph(data,num):
     plt.xlabel('Days')
     plt.ylabel('Stock Price')
     plt.grid(True)
-    plt.savefig(f'static/plot_{num}.png')
+    plt.savefig(f'static/plot_{0}.png')
     plt.show()
     plt.clf()
     #num+=1
