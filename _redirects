@@ -1,5 +1,8 @@
 /index  /templates/index  301
 /index2  /templates/index2  301
+/blackscholes  /templates/blackscholes  301
+/monte  /templates/montecarlo  301
+/about  /templates/aboutus  301
 /templates/static/*    /static/:splat    200
-/templates/*  /:splat 200
+
 
