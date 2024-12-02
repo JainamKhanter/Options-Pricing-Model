@@ -1,4 +1,5 @@
 /index  /templates/index  301
 /index2  /templates/index2  301
 /templates/static/*    /static/:splat    200
+/templates/*  /:splat 200
 
